@@ -19,8 +19,6 @@ public class ExercicioTres {
         result1 = 4/(2+2)/4f;
         result2 = 4/2+2/4f;
         print("B",result1,result2);
-
-
     }
 
     public void letraC(){

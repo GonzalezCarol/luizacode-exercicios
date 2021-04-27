@@ -1,12 +1,12 @@
 package com.exerciciosluizacode.exercicios.exe2704.exec1;
 
 
-import java.time.LocalDate;
+import java.util.Locale;
 
 public class Person {
-    private String name;
-    private String isBorn;
-    private Double height;
+    protected String name;
+    protected String isBorn;
+    protected Double height;
 
     public Person(String name, String isBorn, Double height) {
         this.name = name;

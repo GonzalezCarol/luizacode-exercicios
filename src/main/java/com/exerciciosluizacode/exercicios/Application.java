@@ -1,11 +1,12 @@
 package com.exerciciosluizacode.exercicios;
 
 
-import com.exerciciosluizacode.exercicios.exe2704.exec1.Person;
-import com.exerciciosluizacode.exercicios.exe2704.exec1.ServicePerson;
+import com.exerciciosluizacode.exercicios.exe2704.exec1.ControllerPerson;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ import java.util.Scanner;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		SpringApplication.run(Application.class, args);
 
 //		ExercicioTres exercicioTres = new ExercicioTres();
@@ -59,16 +60,9 @@ public class Application {
 
 		//! Exercicios dia 27/04
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Informe o seu nome");
-		String name = scanner.next();
 
-		ServicePerson servicePerson = new ServicePerson(name, "03-12-1995", 1.64);
-//		servicePerson.setName("CAROLA");
-		System.out.println(servicePerson.getName());
-
-
-
+		ControllerPerson controllerPerson = new ControllerPerson();
+		controllerPerson.controllerPerson();
 
 	}
 
