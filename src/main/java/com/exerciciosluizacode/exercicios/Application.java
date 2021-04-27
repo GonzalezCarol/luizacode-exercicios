@@ -1,16 +1,14 @@
 package com.exerciciosluizacode.exercicios;
 
-import com.exerciciosluizacode.exercicios.exe2204.exerc10.ExercicioDez;
-import com.exerciciosluizacode.exercicios.exe2204.exerc11.ExercicioOnze;
-import com.exerciciosluizacode.exercicios.exe2204.exerc3.ExercicioTres;
-import com.exerciciosluizacode.exercicios.exe2204.exerc4.ExercicioQuatro;
-import com.exerciciosluizacode.exercicios.exe2204.exerc5.ExercicioCinco;
-import com.exerciciosluizacode.exercicios.exe2204.exerc6.ExercicioSeis;
-import com.exerciciosluizacode.exercicios.exe2204.exerc7.ExercicioSete;
-import com.exerciciosluizacode.exercicios.exe2204.exerc8.ExercicioOito;
-import com.exerciciosluizacode.exercicios.exe2204.exerc9.ExercicioNove;
+
+import com.exerciciosluizacode.exercicios.exe2704.exec1.Person;
+import com.exerciciosluizacode.exercicios.exe2704.exec1.ServicePerson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 @SpringBootApplication
 public class Application {
@@ -18,15 +16,15 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 
-		ExercicioTres exercicioTres = new ExercicioTres();
-		ExercicioQuatro exercicioQuatro = new ExercicioQuatro();
-		ExercicioCinco exercicioCinco = new ExercicioCinco();
-		ExercicioSeis exercicioSeis = new ExercicioSeis();
-		ExercicioSete exercicioSete = new ExercicioSete();
-		ExercicioOito exercicioOito = new ExercicioOito();
-		ExercicioNove exercicioNove = new ExercicioNove();
-		ExercicioDez exercicioDez = new ExercicioDez();
-		ExercicioOnze exercicioOnze = new ExercicioOnze();
+//		ExercicioTres exercicioTres = new ExercicioTres();
+//		ExercicioQuatro exercicioQuatro = new ExercicioQuatro();
+//		ExercicioCinco exercicioCinco = new ExercicioCinco();
+//		ExercicioSeis exercicioSeis = new ExercicioSeis();
+//		ExercicioSete exercicioSete = new ExercicioSete();
+//		ExercicioOito exercicioOito = new ExercicioOito();
+//		ExercicioNove exercicioNove = new ExercicioNove();
+//		ExercicioDez exercicioDez = new ExercicioDez();
+//		ExercicioOnze exercicioOnze = new ExercicioOnze();
 
 //		exercicioTres.letraA();
 //		exercicioTres.letraB();
@@ -56,6 +54,20 @@ public class Application {
 //		exercicioDez.exercicioDez();
 
 //		exercicioOnze.exercicioOnze();
+
+
+
+		//! Exercicios dia 27/04
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe o seu nome");
+		String name = scanner.next();
+
+		ServicePerson servicePerson = new ServicePerson(name, "03-12-1995", 1.64);
+//		servicePerson.setName("CAROLA");
+		System.out.println(servicePerson.getName());
+
+
 
 
 	}
