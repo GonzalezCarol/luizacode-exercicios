@@ -20,10 +20,9 @@ public class ControllerPerson {
         System.out.println("Informe sua altura");
         Double height = scanner.nextDouble();
 
-        Person person1 = new Person("carol", isBorn, height);
+        ServicePerson person1 = new ServicePerson(name, isBorn, height);
 
-        servicePerson.setPerson(person1);
-        servicePerson.calculateAge();
+        System.out.println(person1.calculateAge());
 
     }
 }

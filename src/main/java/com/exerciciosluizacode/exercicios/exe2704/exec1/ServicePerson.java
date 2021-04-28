@@ -13,15 +13,19 @@ import java.util.Locale;
 
 
 public class ServicePerson  extends Person{
-    private Person person;
+   private Integer age;
 
     public ServicePerson() {
     }
 
-    public void calculateAge() throws ParseException {
+    public ServicePerson(String name, String isBorn, Double height) {
+        super(name, isBorn, height);
+    }
+
+    public Integer calculateAge() throws ParseException {
 
         DateFormat dateIsbornFormated = new SimpleDateFormat("dd/M/yyyy");
-        Date date = dateIsbornFormated.parse(person.getIsBorn());
+        Date date = dateIsbornFormated.parse(getIsBorn());
 
         Calendar isBorn = Calendar.getInstance();
         isBorn.setTime(date);
@@ -34,17 +38,7 @@ public class ServicePerson  extends Person{
         Integer monthIsBornResult = isBorn.get(Calendar.MONTH)+1;
         Integer dayIsBornResult = isBorn.get(Calendar.DAY_OF_MONTH);
 
-        Integer Age = currentYearResult - yearIsBornResult;
+         return age = currentYearResult - yearIsBornResult;
 
-        System.out.println("Idade - Anos:"+Age+" Meses:"+monthIsBornResult+" Dia:"+dayIsBornResult);
-
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
     }
 }

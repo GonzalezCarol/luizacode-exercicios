@@ -3,6 +3,7 @@ package com.exerciciosluizacode.exercicios;
 
 import com.exerciciosluizacode.exercicios.exe2704.exec1.ControllerPerson;
 
+import com.exerciciosluizacode.exercicios.exec2.ControllerSchedule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -60,9 +61,16 @@ public class Application {
 
 		//! Exercicios dia 27/04
 
+		//! Exercicio 1
+//		ControllerPerson controllerPerson = new ControllerPerson();
+//		controllerPerson.controllerPerson();
 
-		ControllerPerson controllerPerson = new ControllerPerson();
-		controllerPerson.controllerPerson();
+		//!Exercicio 2
+
+		ControllerSchedule controllerSchedule = new ControllerSchedule();
+		controllerSchedule.controllerSchedule();
+
+
 
 	}
 
