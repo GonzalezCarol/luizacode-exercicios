@@ -12,6 +12,9 @@ public class ServiceSchedule extends Person {
         super(name, isBorn, height);
     }
 
+    public ServiceSchedule() {
+    }
+
     public Integer serviceSchedule() throws ParseException {
         String name = getName();
         String isBorn = getIsBorn();
