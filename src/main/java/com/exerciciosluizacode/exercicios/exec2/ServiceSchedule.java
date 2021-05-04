@@ -26,14 +26,14 @@ public class ServiceSchedule extends Person {
         return servicePerson.calculateAge();
     }
 
-    public List saveContact(String name, Integer age, Double height) {
+    public void saveContact(String name, Integer age, Double height) {
         Person person = new Person();
         List<Object> contactsTobeSaved = new ArrayList(10);
-        person.setName = name;
-        person.setAge = setName(name);
-        person.SetHeight = setName(name);
+        person.setName(name);
+        person.setAge(age);
+        person.setHeight(height);
 
         contactsTobeSaved.add(person);
-        return contactsTobeSaved;
+
     }
 }

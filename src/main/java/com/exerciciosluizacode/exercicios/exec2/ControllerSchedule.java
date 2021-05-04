@@ -20,7 +20,7 @@ public class ControllerSchedule {
 
             int i;
             for(i=0; i<10; i++) {
-                System.out.println("Informe o nome do primeiro contato");
+                System.out.println("Informe o nome do contato");
                 name = scanner.next();
 
                 System.out.println("Informe a data de nascimento do contato ex: dd/MM/yyyy");
@@ -31,8 +31,7 @@ public class ControllerSchedule {
 
                 ServiceSchedule serviceSchedule = new ServiceSchedule(name, isBorn, height);
                 Integer age = serviceSchedule.serviceScheduleReturnAge();
-                System.out.println(serviceScheduleInstance.saveContact(name,age,height));
-                ;
+                serviceScheduleInstance.saveContact(name,age,height);
             }
 
     }
