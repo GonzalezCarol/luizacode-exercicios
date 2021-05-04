@@ -15,11 +15,8 @@ public class ControllerSchedule {
     public void controllerSchedule() throws ParseException {
 //        ServiceSchedule serviceScheduleInstance = new ServiceSchedule();
 
-        public void saveContact(){
             Scanner scanner = new Scanner(System.in);
             ServiceSchedule serviceScheduleInstance = new ServiceSchedule();
-
-
 
             int i;
             for(i=0; i<10; i++) {
@@ -33,10 +30,10 @@ public class ControllerSchedule {
                 height = scanner.nextDouble();
 
                 ServiceSchedule serviceSchedule = new ServiceSchedule(name, isBorn, height);
-                 serviceScheduleInstance.saveContact(serviceSchedule.serviceSchedule());
-                System.out.println(contacts[i]);
+                Integer age = serviceSchedule.serviceScheduleReturnAge();
+                System.out.println(serviceScheduleInstance.saveContact(name,age,height));
+                ;
             }
 
-        }
     }
 }

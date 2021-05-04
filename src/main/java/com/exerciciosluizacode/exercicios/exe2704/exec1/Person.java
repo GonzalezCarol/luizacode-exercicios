@@ -7,6 +7,7 @@ public class Person {
     protected String name;
     protected String isBorn;
     protected Double height;
+    protected Integer age;
 
     public Person(String name, String isBorn, Double height) {
         this.name = name;
@@ -39,5 +40,13 @@ public class Person {
 
     public void setHeight(Double height) {
         this.height = height;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

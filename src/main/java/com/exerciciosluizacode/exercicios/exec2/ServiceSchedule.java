@@ -17,7 +17,7 @@ public class ServiceSchedule extends Person {
     public ServiceSchedule() {
     }
 
-    public Integer serviceSchedule() throws ParseException {
+    public Integer serviceScheduleReturnAge() throws ParseException {
         String name = getName();
         String isBorn = getIsBorn();
         double height = getHeight();
@@ -26,10 +26,14 @@ public class ServiceSchedule extends Person {
         return servicePerson.calculateAge();
     }
 
-    public void saveContact(String name, Integer age, double height){
+    public List saveContact(String name, Integer age, Double height) {
+        Person person = new Person();
         List<Object> contactsTobeSaved = new ArrayList(10);
-        contactsTobeSaved.add(name, age, height);
+        person.setName = name;
+        person.setAge = setName(name);
+        person.SetHeight = setName(name);
+
+        contactsTobeSaved.add(person);
+        return contactsTobeSaved;
     }
-
-
 }
