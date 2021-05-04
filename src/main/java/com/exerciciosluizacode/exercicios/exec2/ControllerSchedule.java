@@ -3,6 +3,8 @@ package com.exerciciosluizacode.exercicios.exec2;
 import com.exerciciosluizacode.exercicios.exe2704.exec1.ServicePerson;
 
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ControllerSchedule {
@@ -11,9 +13,16 @@ public class ControllerSchedule {
     private double height;
 
     public void controllerSchedule() throws ParseException {
-        Scanner scanner = new Scanner(System.in);
+//        ServiceSchedule serviceScheduleInstance = new ServiceSchedule();
 
-            for(int i=0; i<10; i++) {
+        public void saveContact(){
+            Scanner scanner = new Scanner(System.in);
+            ServiceSchedule serviceScheduleInstance = new ServiceSchedule();
+
+
+
+            int i;
+            for(i=0; i<10; i++) {
                 System.out.println("Informe o nome do primeiro contato");
                 name = scanner.next();
 
@@ -24,7 +33,10 @@ public class ControllerSchedule {
                 height = scanner.nextDouble();
 
                 ServiceSchedule serviceSchedule = new ServiceSchedule(name, isBorn, height);
-                System.out.println(serviceSchedule.serviceSchedule());
+                 serviceScheduleInstance.saveContact(serviceSchedule.serviceSchedule());
+                System.out.println(contacts[i]);
             }
+
+        }
     }
 }
