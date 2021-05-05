@@ -49,4 +49,12 @@ public class Person {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.getName() +
+                ", Age: " + this.getAge()+
+                ", Height:" + this.getHeight();
+    }
+
 }

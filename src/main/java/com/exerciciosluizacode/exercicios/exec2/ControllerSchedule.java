@@ -19,7 +19,7 @@ public class ControllerSchedule {
             ServiceSchedule serviceScheduleInstance = new ServiceSchedule();
 
             int i;
-            for(i=0; i<10; i++) {
+            for(i=0; i<2; i++) {
                 System.out.println("Informe o nome do contato");
                 name = scanner.next();
 
@@ -33,6 +33,19 @@ public class ControllerSchedule {
                 Integer age = serviceSchedule.serviceScheduleReturnAge();
                 serviceScheduleInstance.saveContact(name,age,height);
             }
+            serviceScheduleInstance.printSchedule();
+
+            System.out.println("Informe o identificador do contato desejado");
+            int index = scanner.nextInt();
+            serviceScheduleInstance.printContactByIndex(index);
+
+            System.out.println("Informe o nome do contato que deseja excluir");
+            String nameToRemove = scanner.next();
+            serviceScheduleInstance.removePersonByName(nameToRemove);
+
+
+
+
 
     }
 }

@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceSchedule extends Person {
-//    ServicePerson servicePerson = new ServicePerson();
+
+    List<Object> contactsListSchedule = new ArrayList<Object>(10);
 
     public ServiceSchedule(String name, String isBorn, double height) {
         super(name, isBorn, height);
@@ -28,12 +29,30 @@ public class ServiceSchedule extends Person {
 
     public void saveContact(String name, Integer age, Double height) {
         Person person = new Person();
-        List<Object> contactsTobeSaved = new ArrayList(10);
         person.setName(name);
         person.setAge(age);
         person.setHeight(height);
 
-        contactsTobeSaved.add(person);
+        contactsListSchedule.add(person);
 
+    }
+
+    public void removePersonByName(String name){
+        for(Object scheduleContact: contactsListSchedule){
+            if(scheduleContact.equals(name)) {
+                contactsListSchedule.remove(scheduleContact);
+            }
+        }
+        printSchedule();
+    }
+
+    public void printSchedule(){
+        for(Object scheduleContact: contactsListSchedule){
+            System.out.println("Contato:::"+scheduleContact);
+        }
+    }
+
+    public void printContactByIndex(int index){
+        System.out.println("Contato:::"+contactsListSchedule.get(index));
     }
 }
